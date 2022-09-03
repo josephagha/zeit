@@ -1,0 +1,24 @@
+@import "../../../../styles/index.scss";
+
+.tabs {
+  
+  @include screen(m) {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
+
+  .tabContainer {
+    padding: 2rem 1.5rem 0.5rem 1rem;
+    background-color: $AIDAwhite;
+    align-self: start;
+    &:last-child{
+      padding-bottom: 3rem;
+    }
+   
+    @include screen(m) {
+      padding: 3rem;
+      min-height: 410px;
+    }
+  }
+}

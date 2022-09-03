@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>svgToIcons Preview</title>
+    <link rel="stylesheet" href="svgToIcons.css">
+    <style>
+        .s2i__page-title {
+            font-family: Helvetica, Arial, Sans-Serif;
+            margin: 20px 0 10px 0;
+        }
+        .s2i__page-wrap {
+            margin: 0 auto;
+            max-width: 1000px;
+            padding: 0 1rem;
+        }
+        .s2i__container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            grid-gap: 3px;
+        }
+        .s2i__icon-link {
+            display: block;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 5px;
+            text-decoration: none;
+            color: black;
+            overflow: hidden;
+        }
+        .s2i__icon-link:hover {
+            background-color: #3af;
+            color: white;
+            border-color: #2E99E6;
+        }
+        .s2i__icon-link > i {
+            font-size: 32px;
+            background-color: #e8e8e8;
+        }
+        .s2i__icon-link:hover > i {
+            background-color: #2E99E6;
+        }
+        .s2i__classname {
+            display: block;
+            font-family: monospace;
+            font-size: 10px;
+            white-space: nowrap;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="s2i__page-wrap">
+        <h1 class="s2i__page-title">svgToIcons</h1>
+        <div class="s2i__container">
+            <a href="" class="s2i__icon-link"><i class="aicon-angle-right"></i><span class="s2i__classname">aicon-angle-right</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-check"></i><span class="s2i__classname">aicon-check</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-chevron-up"></i><span class="s2i__classname">aicon-chevron-up</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-clock"></i><span class="s2i__classname">aicon-clock</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-desktop"></i><span class="s2i__classname">aicon-desktop</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-exit"></i><span class="s2i__classname">aicon-exit</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-EXPIclub"></i><span class="s2i__classname">aicon-EXPIclub</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-eye"></i><span class="s2i__classname">aicon-eye</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-file-text"></i><span class="s2i__classname">aicon-file-text</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-grid"></i><span class="s2i__classname">aicon-grid</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-home"></i><span class="s2i__classname">aicon-home</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-info-circle"></i><span class="s2i__classname">aicon-info-circle</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-internet"></i><span class="s2i__classname">aicon-internet</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-layer-group"></i><span class="s2i__classname">aicon-layer-group</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-menu"></i><span class="s2i__classname">aicon-menu</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-mobile"></i><span class="s2i__classname">aicon-mobile</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-navigation"></i><span class="s2i__classname">aicon-navigation</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-Schloss"></i><span class="s2i__classname">aicon-Schloss</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-ship"></i><span class="s2i__classname">aicon-ship</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-smartphone"></i><span class="s2i__classname">aicon-smartphone</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-snowflake"></i><span class="s2i__classname">aicon-snowflake</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-tv"></i><span class="s2i__classname">aicon-tv</span></a>
+            <a href="" class="s2i__icon-link"><i class="aicon-zap"></i><span class="s2i__classname">aicon-zap</span></a>
+        </div>
+    </div>
+    <script>
+        Array.prototype.forEach.call(document.querySelectorAll( '.s2i__icon-link' ), function (a) {
+            a.addEventListener('click', function(ev) {
+                ev.preventDefault();
+                let classname = a.querySelector('.s2i__classname');
+                if(classname) {
+                    let range = document.createRange();
+                    range.selectNodeContents(classname);
+                    let selection = window.getSelection();
+                    selection.removeAllRanges();
+                    selection.addRange(range);
+                    document.execCommand("Copy", false, null);
+                }
+            }, false );
+        });
+    </script>
+  </body>
+</html>

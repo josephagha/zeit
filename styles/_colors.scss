@@ -1,0 +1,79 @@
+// Colors
+$AIDAwhite: #ffffff;
+
+$AIDAdark: #004461;
+$AIDAblack: #171717;
+$AIDAgrey_darker: #777E90;
+$AIDAgrey_dark: #B1B5C3;
+$AIDAgrey: #E6E8EC;
+$AIDAgrey_light:#F0F4F6;
+
+$AIDAgreen:#009F48;
+$AIDAgreen_light:#ECF8EA;
+$AIDAred: #ED2400;
+$AIDAred_light:#FFEAE6;
+$AIDAyellow: #FFC200;
+$AIDAyellow_light:#FFFBE5;
+$AIDAblue: #0094CA;
+$AIDAblue_hover: #3399CC;
+$AIDAblue_light:#E7F8FD;
+
+$special_border: #DBDEE7;
+
+.textAIDAblack{
+color:$AIDAblack;
+}
+.textAIDAgrey_darker{
+color:$AIDAgrey_darker;
+}
+.textAIDAgrey_dark{
+color:$AIDAgrey_dark;
+}
+.textAIDAgrey{
+color:$AIDAgrey !important;
+}
+.textAIDAgrey_light{
+color:$AIDAgrey_light;
+}
+.textAIDAgreen{
+color:$AIDAgreen;
+}
+.textAIDAgreen_light{
+color:$AIDAgreen_light;
+}
+.textAIDAred{
+color:$AIDAred;
+}
+.textAIDAred_light{
+color:$AIDAred_light;
+}
+.textAIDAblue{
+color:$AIDAblue;
+}
+.textAIDAblue_light{
+color:$AIDAblue_light;
+}
+.textspecial_border{
+color:$special_border;
+}
+
+
+//old
+
+$crimson: #96255c;
+$dark-grey: #cacaca;
+$darker-grey: #a0a0a0;
+$extra-blue: #2dafe6;
+$green: #71bc51;
+$grey: #e5e5e5;
+$inherit: inherit;
+$light-blue: #f5faff;
+$light-green: #e3f2dc;
+$light-grey: #f8f8f8;
+$light-red: #ffefe9;
+$orange: #ffa12e;
+$pauschal: #7d79b1;
+$pink: #e5007d;
+$red: #e74502;
+$transparent: transparent;
+$violett: #7d79b1;

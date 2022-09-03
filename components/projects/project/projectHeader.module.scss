@@ -1,0 +1,21 @@
+@import '../../../styles/index.scss';
+
+.projectHeader{
+width: 100%;
+}
+.content {
+  align-items: flex-start;
+  column-gap: 3rem;
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 4rem;
+}
+
+.text {
+  line-height: 0;
+
+  .title {
+    margin-top: 6px;
+    text-transform: uppercase;
+  }
+}

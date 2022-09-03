@@ -1,0 +1,141 @@
+@import '../../../../styles/index.scss';
+
+.div_container{
+  display: flex;
+  flex-flow: column;
+  row-gap: 3rem;
+  background-color: $AIDAwhite;
+  padding: 2rem;
+}
+
+/* Accordion styles */
+  .tab {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 4rem;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    &_input {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+      }
+    & label {
+      display: flex;
+      align-items: flex-start;
+      @include screen(m){align-items: center;}
+      justify-content: space-between;
+      cursor: pointer;
+
+      .title{
+        display: flex;
+        align-items: flex-start;
+        text-transform: capitalize;
+        word-wrap: break-word;
+        margin-right: 0.8rem;
+      /*   width: 45%; */
+        p{
+          margin: 0;
+          width: 100% ;
+        }
+      &_arrow{
+        font-size: 3.5rem;
+        transform: rotate(180deg);
+        color: $AIDAgrey_dark;
+        margin-right: 0.5rem;
+        transition: all 0.3s;
+        }
+      }
+    }
+    &_statusInfo{
+      display: flex;
+      align-items: center;
+      i:last-of-type{
+        margin-right: 3rem;
+      }
+      &_icon{
+        font-size: 3.5rem;
+        color: $AIDAgrey;
+        margin:0 1.5rem;
+        display: none;
+
+        @include screen(m){
+          display: inline-block;
+        }
+      }
+      &_iconSeparator{
+        display: none;
+        @include screen(m){
+          width: 1px;
+          height: 3rem;
+          background: $AIDAgrey;
+          display: inline-block;
+        }
+      }
+    }
+    & div {
+      max-height: 0;
+      color: $AIDAgrey_darker;
+      margin-left: 1rem;
+      @include screen(m){
+        margin-left: 4rem;
+        margin-right: 1rem;
+      }
+      transition: all .2s;
+    }
+
+    .projectLink{
+      display: block;
+      color: $AIDAblue;
+      cursor: pointer;
+    }
+    .descList{
+      list-style: none;
+      margin: 3rem 0;
+      padding: 0;
+      li{
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        padding-top: 0.3rem;
+        i{
+          font-size: 3.5rem;
+          color: $AIDAgreen;
+          margin-right: 0.2rem;
+        }
+      }
+    }
+    .note{
+      display: flex;
+      align-items:flex-start;
+
+      &_icon{
+        margin: .6rem 1rem 0 1rem;
+        color: $AIDAdark;
+      }
+    }
+    
+    // :checked
+    input:checked {
+        + label {
+            .title{
+              &_arrow{
+                  transform: rotate(0deg);
+                  color: $AIDAblack;
+                  font-weight: bold;
+                }
+            }
+        }
+        ~ div {
+        max-height: 500vh;
+        padding: 2rem 0;
+        }
+     }
+  }
+
+
+
+

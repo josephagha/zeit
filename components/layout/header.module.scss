@@ -1,0 +1,94 @@
+@import "../../styles/index.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6rem;
+  margin-bottom: 39px;
+}
+
+.nav {
+  position: relative;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .input {
+    display: none;
+  }
+  .label {
+    font-size: 4rem;
+    color: $AIDAblack;
+    padding: 1rem;
+  }
+  .content {
+    overflow: hidden;
+    position: absolute;
+    top: 3.4rem;
+    right: 0;
+    max-height: 0;
+    min-width: 21rem;
+    opacity: 0;
+
+    -webkit-box-shadow: rgb(214 230 246 / 37%) 0px 11px 17px 0px;
+    box-shadow: rgb(214 230 246 / 37%) 0px 11px 17px 0px;
+
+    background-color: $AIDAwhite;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    padding-left: 2rem;
+    transition: all 0.1s;
+
+    .menuItem {
+      display: flex;
+      flex-flow: column;
+      justify-items: flex-start;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      width: 100%;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      font-size: 2rem;
+      cursor: pointer;
+      &:hover {
+        color: $AIDAblue;
+      }
+
+      .button {
+        display: flex;
+        align-items: center;
+        border: none;
+        background: none;
+        font-size: 2rem;
+        padding: 0;
+        cursor: pointer;
+        &:hover {
+          color: $AIDAblue;
+        }
+
+        .icon {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+
+  // :checked
+  .input:checked {
+    + .label {
+      color: $AIDAblue;
+      background-color: $AIDAwhite;
+    }
+    ~ div {
+      max-height: 100vh;
+      padding: 2rem;
+      opacity: 1;
+    }
+  }
+}

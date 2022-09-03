@@ -1,0 +1,10 @@
+@mixin box-shadow($params) {
+    -webkit-box-shadow: $params;
+    -moz-box-shadow: $params;
+    box-shadow: $params;
+  }
+  
+  $shadow-s:  0px 2px 4px -2px #18274B1F;
+
+ 
+

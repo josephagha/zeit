@@ -1,0 +1,31 @@
+@import "../../styles/index.scss";
+
+.button {
+  background: $AIDAblue;
+  border: none;
+  color: $AIDAwhite;
+  cursor: pointer;
+  display: block;
+  font-size: $button1-font-size;
+  font-weight: 700;
+  padding: 2rem 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+
+  &:hover {
+    background: $AIDAblue_hover;
+  }
+
+  .loadingCircle {
+    display: inline-block;
+    margin-right: 1rem;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    background: linear-gradient(182deg, $AIDAwhite, #ffffff4d);
+    -webkit-animation: flip-horizontal-bottom $animationButtonSpeed ease-in-out infinite both;
+    animation: flip-horizontal-bottom $animationButtonSpeed ease-in-out infinite both;
+  }
+}
+

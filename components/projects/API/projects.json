@@ -1,0 +1,710 @@
+[{
+  "slug": "aida-de",
+  "icon": "aicon-internet",
+  "title": "Aida.de",
+  "description": "The online world of AIDA Cruises is being created here",
+  "accomplished": "50",
+  "subprojects": ["planen", "startseite", "entdecken", "Buchen"],
+  "pages": [
+     {
+      "title": "startpage",
+      "subprojects": "startseite",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "done",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": true,
+        "desktopDesign": true,
+        "mobileDesign": true,
+        "testDesign": true,
+        "componentDesc": true
+      },
+      "note": "Der nächste Schritt wird die Übergabe an den Entwickler sein"
+    },
+   {
+      "title": "Darkpage",
+      "subprojects": "startseite",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=320%3A1429",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },
+     {
+      "title": "Reisevorbereitung",
+      "subprojects": "planen",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "done",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "sandra.heinzel@aida.de",
+      "workOnIt": "mohammad.mahmoudagha@aida.de",
+      "projectLink": "https://www.figma.com/file/Zm6BaBPNU4eed0dbY3MhxZ/Planen?node-id=1821%3A52754",
+      "workSteps": {
+        "wireframe": true,
+        "desktopDesign": true,
+        "mobileDesign": true,
+        "testDesign": true,
+        "componentDesc": true
+      },
+      "note": "Der nächste Schritt wird die Übergabe an den Entwickler sein"
+    },
+     {
+      "title": "Reiseschutz",
+      "subprojects": "planen",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "done",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "sandra.heinzel@aida.de",
+      "workOnIt": "mohammad.mahmoudagha@aida.de",
+      "projectLink": "https://www.figma.com/file/Zm6BaBPNU4eed0dbY3MhxZ/Planen?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": true,
+        "desktopDesign": true,
+        "mobileDesign": true,
+        "testDesign": true,
+        "componentDesc": true
+      },
+      "note": "Der nächste Schritt wird die Übergabe an den Entwickler sein"
+    },
+     {
+      "title": "Gepäck (inkl. Packlista)",
+      "subprojects": "planen",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "done",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "sandra.heinzel@aida.de",
+      "workOnIt": "mohammad.mahmoudagha@aida.de",
+      "projectLink": "https://www.figma.com/file/Zm6BaBPNU4eed0dbY3MhxZ/Planen?node-id=1270%3A10437",
+      "workSteps": {
+        "wireframe": true,
+        "desktopDesign": true,
+        "mobileDesign": true,
+        "testDesign": true,
+        "componentDesc": true
+      },
+      "note": "Der nächste Schritt wird die Übergabe an den Entwickler sein"
+    },
+    {
+      "title": "Barrierefreiheit & Gesundheit",
+      "subprojects": "planen",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "done",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "sandra.heinzel@aida.de",
+      "workOnIt": "mohammad.mahmoudagha@aida.de",
+      "projectLink": "https://www.figma.com/file/Zm6BaBPNU4eed0dbY3MhxZ/Planen?node-id=1819%3A51000",
+      "workSteps": {
+        "wireframe": true,
+        "desktopDesign": true,
+        "mobileDesign": true,
+        "testDesign": true,
+        "componentDesc": true
+      },
+      "note": "Der nächste Schritt wird die Übergabe an den Entwickler sein"
+    },
+     {
+      "title": "Reisedokumente & Einreisebestimmungen",
+      "subprojects": "planen",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "done",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "sandra.heinzel@aida.de",
+      "workOnIt": "mohammad.mahmoudagha@aida.de",
+      "projectLink": "https://www.figma.com/file/Zm6BaBPNU4eed0dbY3MhxZ/Planen?node-id=2765%3A147614",
+      "workSteps": {
+        "wireframe": true,
+        "desktopDesign": true,
+        "mobileDesign": true,
+        "testDesign": true,
+        "componentDesc": true
+      },
+      "note": "Der nächste Schritt wird die Übergabe an den Entwickler sein"
+    },
+     {
+      "title": "Schiffsmanifest",
+      "subprojects": "planen",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "done",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "sandra.heinzel@aida.de",
+      "workOnIt": "mohammad.mahmoudagha@aida.de",
+      "projectLink": "https://www.figma.com/file/Zm6BaBPNU4eed0dbY3MhxZ/Planen?node-id=2771%3A179318",
+      "workSteps": {
+        "wireframe": true,
+        "desktopDesign": true,
+        "mobileDesign": true,
+        "testDesign": true,
+        "componentDesc": true
+      },
+      "note": "Der nächste Schritt wird die Übergabe an den Entwickler sein"
+    },
+     {
+      "title": "An- und Abreise",
+      "subprojects": "planen",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "done",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "sandra.heinzel@aida.de",
+      "workOnIt": "mohammad.mahmoudagha@aida.de",
+      "projectLink": "https://www.figma.com/file/Zm6BaBPNU4eed0dbY3MhxZ/Planen?node-id=1342%3A37164",
+      "workSteps": {
+        "wireframe": true,
+        "desktopDesign": true,
+        "mobileDesign": true,
+        "testDesign": true,
+        "componentDesc": true
+      },
+      "note": "Der nächste Schritt wird die Übergabe an den Entwickler sein"
+    },
+     {
+      "title": "mit dem Flugzeug",
+      "subprojects": "planen",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "done",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "sandra.heinzel@aida.de",
+      "workOnIt": "mohammad.mahmoudagha@aida.de",
+      "projectLink": "https://www.figma.com/file/Zm6BaBPNU4eed0dbY3MhxZ/Planen?node-id=1342%3A37165",
+      "workSteps": {
+        "wireframe": true,
+        "desktopDesign": true,
+        "mobileDesign": true,
+        "testDesign": true,
+        "componentDesc": true
+      },
+      "note": "Der nächste Schritt wird die Übergabe an den Entwickler sein"
+    },
+     {
+      "title": "mit der Bahn",
+      "subprojects": "planen",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "done",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "sandra.heinzel@aida.de",
+      "workOnIt": "mohammad.mahmoudagha@aida.de",
+      "projectLink": "https://www.figma.com/file/Zm6BaBPNU4eed0dbY3MhxZ/Planen?node-id=1342%3A37166",
+      "workSteps": {
+        "wireframe": true,
+        "desktopDesign": true,
+        "mobileDesign": true,
+        "testDesign": true,
+        "componentDesc": true
+      },
+      "note": "Der nächste Schritt wird die Übergabe an den Entwickler sein"
+    },
+     {
+      "title": "mit dem Bus",
+      "subprojects": "planen",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "disable",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "sandra.heinzel@aida.de",
+      "workOnIt": "mohammad.mahmoudagha@aida.de",
+      "projectLink": "https://www.figma.com/file/Zm6BaBPNU4eed0dbY3MhxZ/Planen?node-id=1342%3A37167",
+      "workSteps": {
+        "wireframe": true,
+        "desktopDesign": true,
+        "mobileDesign": true,
+        "testDesign": true,
+        "componentDesc": true
+      },
+      "note": "Der nächste Schritt wird die Übergabe an den Entwickler sein"
+    },
+    {
+      "title": "mit dem Auto (Parkservice)",
+      "subprojects": "planen",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "done",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "sandra.heinzel@aida.de",
+      "workOnIt": "mohammad.mahmoudagha@aida.de",
+      "projectLink": "https://www.figma.com/file/Zm6BaBPNU4eed0dbY3MhxZ/Planen?node-id=84%3A8857",
+      "workSteps": {
+        "wireframe": true,
+        "desktopDesign": true,
+        "mobileDesign": true,
+        "testDesign": true,
+        "componentDesc": true
+      },
+      "note": "Der nächste Schritt wird die Übergabe an den Entwickler sein"
+    },
+    {
+      "title": "Gepäckservice",
+      "subprojects": "planen",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "done",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "sandra.heinzel@aida.de",
+      "workOnIt": "mohammad.mahmoudagha@aida.de",
+      "projectLink": "https://www.figma.com/file/Zm6BaBPNU4eed0dbY3MhxZ/Planen?node-id=1172%3A11197",
+      "workSteps": {
+        "wireframe": true,
+        "desktopDesign": true,
+        "mobileDesign": true,
+        "testDesign": true,
+        "componentDesc": true
+      },
+      "note": "Der nächste Schritt wird die Übergabe an den Entwickler sein"
+    },
+    {
+      "title": "Checkin/Checkout",
+      "subprojects": "planen",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "done",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "sandra.heinzel@aida.de",
+      "workOnIt": "mohammad.mahmoudagha@aida.de",
+      "projectLink": "https://www.figma.com/file/Zm6BaBPNU4eed0dbY3MhxZ/Planen?node-id=1342%3A37257",
+      "workSteps": {
+        "wireframe": true,
+        "desktopDesign": true,
+        "mobileDesign": true,
+        "testDesign": true,
+        "componentDesc": true
+      },
+      "note": "Der nächste Schritt wird die Übergabe an den Entwickler sein"
+    }
+    ]
+},
+{
+  "slug": "myaida",
+  "icon": "aicon-Schloss",
+  "title": "myAIDA",
+  "description": "My profile, my travels and club membership",
+  "accomplished": "30",
+  "subprojects": ["planen", "startseite", "entdecken"],
+  "pages": [
+     {
+      "title": "Login",
+      "subprojects": "myAIDA",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },
+    {
+      "title": "Welcome nach Login",
+      "subprojects": "myAIDA",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },
+    {
+      "title": "myAIDA Startpage",
+      "subprojects": "myAIDA",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },
+    {
+      "title": "Welcome ohne Reise",
+      "subprojects": "myAIDA",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },
+    {
+      "title": "Welcome gebuchte Reise",
+      "subprojects": "myAIDA",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },
+    {
+      "title": "2 Tage vor Reisebeginn",
+      "subprojects": "myAIDA",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },
+    {
+      "title": "Welcomean Bord",
+      "subprojects": "myAIDA",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },{
+      "title": "Welcome nach der Reise",
+      "subprojects": "myAIDA",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    }
+    ]
+},
+{
+  "slug": "bordportal",
+  "icon": "aicon-ship",
+  "title": "Bordportal",
+  "description": "AIDA Bordportal is a digital helper for your journey on an AIDA ship",
+  "accomplished": "10",
+  "subprojects": ["planen", "startseite", "entdecken", "Buchen"],
+  "pages": [
+     {
+      "title": "Login",
+      "subprojects": "Bordportal",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    }
+    ,{
+      "title": "Dashboard",
+      "subprojects": "Bordportal",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },{
+      "title": "Öffnungszeiten",
+      "subprojects": "Bordportal",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },{
+      "title": "X Dinning",
+      "subprojects": "Bordportal",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },{
+      "title": "Restaurants",
+      "subprojects": "Bordportal",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },{
+      "title": "Internetpakete",
+      "subprojects": "Bordportal",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    }
+    ]
+},
+{
+  "slug": "mobile-app",
+  "icon": "aicon-mobile",
+  "title": "Mobile App",
+  "description": "This is where the digital world of AIDA Cruises is created",
+  "accomplished": "05",
+  "subprojects": ["planen", "startseite", "entdecken", "Buchen"],
+  "pages": [
+     {
+      "title": "Login",
+      "subprojects": "mobileApp",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": true },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },
+    {
+      "title": "Dashboard",
+      "subprojects": "mobileApp",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": true },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },{
+      "title": "Destinationen",
+      "subprojects": "mobileApp",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": true },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },{
+      "title": "Schiffe",
+      "subprojects": "mobileApp",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": true },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    }
+    ]
+},
+{
+  "slug": "expinet",
+  "icon": "aicon-EXPIclub",
+  "title": "EXPInet",
+  "description": "Travel agency portal is your strong partner in Business",
+  "accomplished": "40",
+  "subprojects": ["planen", "startseite", "entdecken", "Buchen"],
+  "pages": [
+    {
+      "title": "Login",
+      "subprojects": "expinet",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },
+    {
+      "title": "Dashboard",
+      "subprojects": "expinet",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },
+    {
+      "title": "Meine Vorgänge",
+      "subprojects": "expinet",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    },
+    {
+      "title": "Meine Daten",
+      "subprojects": "expinet",
+      "description": "Ein kurzer Überblick über den Inhalt dieser Seite",
+      "status": "in progress",
+      "touchPoint": { "mobile": true, "desktop": true, "tv": false },
+      "requestedBy": "",
+      "workOnIt": "veysel.oender@aida.de",
+      "projectLink": "https://www.figma.com/file/6tdgRywQgmWxq8SNVYNaDh/Startseite?node-id=0%3A1",
+      "workSteps": {
+        "wireframe": false,
+        "desktopDesign": false,
+        "mobileDesign": false,
+        "testDesign": false,
+        "componentDesc": false
+      },
+      "note": ""
+    }
+  ]
+}]
+

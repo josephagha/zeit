@@ -1,0 +1,32 @@
+$big-column-gap: 4rem;
+$big-row-gap: 4rem;
+
+$small-column-gap: 3rem;
+$small-row-gap: 3rem;
+
+$screen-size-middle-point:96rem;
+$desktop-container-size:160rem;
+
+
+@mixin screen($size) {
+    @if $size == xs  {
+        //mobile 768px wide or less
+        @media screen and (max-width: 415px){@content;}
+    } @else if $size == s {
+      //mobile 768px wide or less
+      @media screen and (max-width: 768px){@content;}
+   } @else if $size == m {
+       //Tablet is 768px wide or more
+       @media screen and (min-width: 768px){@content;}
+    }@else if $size == l {
+      //Desktop up 1280px or wide
+      @media screen and (min-width: 1290px){@content;}
+  }
+  }
+
+.container{ 
+  max-width: calc(100% - 4rem);
+  @include screen(m){max-width: calc(100% - 8rem);}
+  @include screen(l){max-width: $desktop-container-size;}
+  margin: auto;
+}

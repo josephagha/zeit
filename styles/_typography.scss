@@ -1,0 +1,153 @@
+@import './container-size';
+
+// Fonts
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url(../media/fonts/open_sans/OpenSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: OpenSans-SemiBold;
+  src: url(../media/fonts/open_sans/OpenSans-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url(../media/fonts/open_sans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: SourceSerifPro-SemiBold;
+  src: url(../media/fonts/Source_Serif_Pro/SourceSerifPro-SemiBold.ttf);
+}
+@font-face {
+  font-family: SourceSerifPro-Regular;
+  src: url(../media/fonts/Source_Serif_Pro/SourceSerifPro-Regular.ttf);
+}
+@font-face {
+  font-family: SourceSerifPro-Light;
+  src: url(../media/fonts/Source_Serif_Pro/SourceSerifPro-Light.ttf);
+}
+
+$font-family-open-sans: OpenSans-Regular;
+$font-family-open-sans-semi-bold: OpenSans-SemiBold;
+$font-family-open-sans-bold: OpenSans-Bold;
+
+$font-family-base: $font-family-open-sans, "Arial", sans-serif;
+$font-family-base-bold: $font-family-open-sans-bold, "Arial", sans-serif;
+
+$font-family-secondary: SourceSerifPro-Regular, Helvetica, sans-serif;
+$font-family-secondary-light: SourceSerifPro-Light, Helvetica, sans-serif;
+$font-family-secondary-bold: SourceSerifPro-SemiBold, Helvetica, sans-serif;
+
+$font-default-color: $AIDAblack;
+$body-color: $font-default-color;
+$text-muted: $AIDAgrey;
+
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder !default;
+
+//typography definition
+$h2-font-size: 4.1rem;
+$h2-font-weight: 400;
+
+$h3-font-size: 4rem;
+$h3-font-weight: 400;
+
+$h4-font-size: 3rem;
+$h4-font-weight: 400;
+
+$caption1-font-size: 1.75rem;
+$caption2-font-size: 1.9rem;
+$button1-font-size: 2rem;
+$link2-font-size: 2rem;
+
+
+
+.typography {
+  &_h1 {
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-normal;
+    font-size: 5rem;
+  }
+  &_h2 {
+    font-family: $font-family-secondary;
+    font-weight: $font-weight-light;
+    font-size: 4.5rem;
+  }
+  &_h3 {
+    font-family: $font-family-base;
+    font-weight: $font-weight-bold;
+    font-size: 4rem;
+  }
+  &_h4 {
+    font-family: $font-family-base;
+    font-weight: $font-weight-bold;
+    font-size: 3rem;
+  }
+  &_hairline-large {
+    font-family: $font-family-base-bold;
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
+  }
+  &_hairline-small {
+    font-family: $font-family-base-bold;
+    font-size: 1.7rem;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+  }
+  &_body1 {
+    font-size: 2.25rem;
+    line-height: 3.75rem;
+  }
+  &_body1-bold {
+    font-family: $font-family-base-bold;
+    font-size: 2.25rem;
+    line-height: 3.75rem;
+    font-weight: $font-weight-bold;
+  }
+  &_body2 {
+    font-size: 2rem;
+    line-height: 3.21rem;
+  }
+  &_body2-bold {
+    font-family: $font-family-base-bold;
+    font-size: 2rem;
+    line-height: 3.21rem;
+    font-weight: $font-weight-bold;
+    line-height: 4rem;
+  }
+  &_caption1 {
+    font-size: $caption1-font-size;
+    line-height: 3rem;
+  }
+  &_caption2-bold  {
+    font-family: $font-family-base-bold;
+    font-size: $caption2-font-size;
+    @include screen(m){ font-size: 1.50rem;}
+  }
+  &_button1 {
+    font-size: $button1-font-size;
+  }
+
+  &_title-subtitle{
+   display: block;
+   height: 4rem; 
+  }
+  &_in-block{
+    display: block;
+   height: 1rem; 
+  }
+  &_between-block{
+    display: block;
+   height: 9rem; 
+  }
+
+  &_white-space{
+    white-space: normal;
+    word-break:break-all;
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../styles/index.scss";
+
+.breadcrumb {
+  display: flex;
+  padding: 0;
+  height: 3rem;
+  margin-bottom: 8rem;
+  text-transform: capitalize;
+
+  &_link {
+    margin-right: 0.8rem;
+    &:hover {
+      color: $AIDAblue_hover;
+    }
+    .icon {
+      padding-top: 0.4rem;
+      font-size: 3rem;
+      color: $AIDAgrey-dark;
+      &:hover {
+        color: $AIDAblue_hover;
+      }
+    }
+  }
+
+  &_currentLink {
+    color: $AIDAblack;
+  }
+
+  &_separator {
+    display: flex;
+    align-items: center;
+    margin-top: 0.4rem;
+    font-size: 2.5rem;
+    @include screen(m) {
+      font-size: 2rem;
+    }
+    color: $AIDAgrey-dark;
+    margin-right: 0.8rem;
+  }
+}

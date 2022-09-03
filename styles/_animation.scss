@@ -1,0 +1,77 @@
+// animation
+$animationLodingSpeed: 0.4s;
+$animationButtonSpeed: 0.4s;
+
+@-webkit-keyframes flip-horizontal-bottom {
+  0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    background-position: 51% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+    background-position: 51% 0%;
+  }
+}
+
+@keyframes flip-horizontal-bottom {
+  0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    background-position: 51% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+    background-position: 51% 0%;
+  }
+}
+
+@-webkit-keyframes flip-horizontal-loding {
+  0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    background: linear-gradient(182deg, $AIDAblue, $AIDAblue_light);
+  }
+  25% {
+    background-position: 25% 500%;
+    background: linear-gradient(182deg, $AIDAred, $AIDAred_light);
+  }
+  75% {
+    background-position: 50% 100%;
+    background: linear-gradient(182deg, $AIDAyellow, $AIDAyellow_light);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+    background: linear-gradient(182deg, $AIDAgreen, $AIDAgreen_light);
+  }
+}
+
+@keyframes flip-horizontal-loding {
+  0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+    background: linear-gradient(182deg, $AIDAblue, $AIDAblue_light);
+  }
+  25% {
+    background-position: 25% 500%;
+    background: linear-gradient(182deg, $AIDAred, $AIDAred_light);
+  }
+  75% {
+    background-position: 50% 100%;
+    background: linear-gradient(182deg, $AIDAyellow, $AIDAyellow_light);
+  }
+  100% {
+    -webkit-transform: rotateX(-180deg);
+    transform: rotateX(-180deg);
+    background: linear-gradient(182deg, $AIDAgreen, $AIDAgreen_light);
+  }
+}

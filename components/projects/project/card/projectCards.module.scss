@@ -1,0 +1,11 @@
+@import '../../../../styles/index.scss';
+
+.div_container{
+    display: flex;
+    flex-flow: column;
+    align-content: space-between;
+    @include screen(m){
+        flex-flow: row wrap;
+        gap: 4rem;
+    }
+}
