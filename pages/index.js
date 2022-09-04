@@ -10,7 +10,7 @@ export default function Home({weather}) {
   );
 }
 
-const defauleEndpoint = `https://api.openweathermap.org/data/2.5/weather?q=Hamburg&units=metric&appid=${process.env.API_KEY}`;
+const defauleEndpoint = `https://api.openweathermap.org/data/2.5/weather?q=Hamburg&units=metric&appid=${process.env.WEATHER_API_KEY}`;
 
 export async function getStaticProps() {
   const res = await fetch(defauleEndpoint);
