@@ -1,12 +1,25 @@
-import { Fragment } from 'react';
-import StartingPage from '../components/startingPage/startingPage';
+import { Fragment } from "react";
+import StartingPage from "../components/startingPage/startingPage";
 
-function Home() {
-  return(
+
+export default function Home({weather}) {
+  return (
     <Fragment>
-     <StartingPage/>
+      <StartingPage weather={weather} />
     </Fragment>
-  )
+  );
 }
 
-export default Home;
+const defauleEndpoint = `https://api.openweathermap.org/data/2.5/weather?q=Hamburg&units=metric&appid=${process.env.API_KEY}`;
+
+export async function getStaticProps() {
+  const res = await fetch(defauleEndpoint);
+  const weather = await res.json();
+
+  return {
+    props: {
+      weather,
+    },
+    revalidate: 10800
+  };
+}

@@ -9,7 +9,10 @@ const nextConfig = {
    NEXTAUTH_SECRET: "secretXXx1",
    SECRET_ROLE: "whatIsYoursRole",
    DATABASE_URL: 'mongodb+srv://muha:eT3PL1oLFq9dvXnG@transparent.1bqbu.mongodb.net/projects-overview?retryWrites=true&w=majority',
-  }
+  },
+  images: {
+    domains: ['openweathermap.org'],
+  },
 }
 
 module.exports = nextConfig

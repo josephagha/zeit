@@ -3,14 +3,5 @@
 .loding {
   display: grid;
   place-items: center;
-  .bigCircle {
-    display: inline-block;
-    margin-right: 1rem;
-    border-radius: 50%;
-    width: 4.2rem;
-    height: 4rem;
-    -webkit-animation: flip-horizontal-loding $animationLodingSpeed  ease-in-out infinite both;
-    animation: flip-horizontal-loding $animationLodingSpeed ease-in-out infinite both;
-  }
 }
 

@@ -44,6 +44,7 @@
 
 .nav {
   &__list {
+    align-items: center;
     &__item {
       font-size: $nav_link_small;
     }

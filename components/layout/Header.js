@@ -4,7 +4,9 @@ import Link from "next/link";
 import logo from "../../public/svg/logo.svg";
 import styles from "./header.module.scss";
 
-function Header() {
+import Weather from "../weather/index";
+
+function Header({weather}) {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -23,6 +25,9 @@ function Header() {
           </li>
           <li className={`${styles.nav__list__item} ${styles.categoryNav__list__item_more}`}>
             MEHR
+          </li>
+          <li className={`${styles.nav__list__item}`}>
+            <Weather weather={weather}/>
           </li>
         </ul>
         <ul className={styles.nav__list}>

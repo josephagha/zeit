@@ -1,11 +1,7 @@
-import styles from './loding.module.scss';
+import styles from "./loding.module.scss";
 
 function Loding() {
-  return(
-    <div className={styles.loding}>
-    <span className={styles.bigCircle}></span>
-    </div>
-  )
+  return <div className={styles.loding}>loding</div>;
 }
 
 export default Loding;

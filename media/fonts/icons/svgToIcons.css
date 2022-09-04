@@ -51,6 +51,9 @@
 .aicon-navigation:before {
   content: '\F005'
 }
+.aicon-pencil:before {
+  content: '\F01A'
+}
 .aicon-search:before {
   content: '\F018'
 }

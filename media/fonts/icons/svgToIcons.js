@@ -9,6 +9,7 @@ export default {
     "menu": "aicon-menu",
     "mobile": "aicon-mobile",
     "navigation": "aicon-navigation",
+    "pencil": "aicon-pencil",
     "search": "aicon-search",
     "smartphone": "aicon-smartphone",
     "zap": "aicon-zap",
