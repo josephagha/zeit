@@ -24,44 +24,23 @@
 .aicon-angle-right:before {
   content: '\F012'
 }
+.aicon-bookmark:before {
+  content: '\F017'
+}
 .aicon-check:before {
   content: '\F000'
 }
 .aicon-chevron-up:before {
   content: '\F001'
 }
-.aicon-clock:before {
-  content: '\F014'
-}
-.aicon-desktop:before {
-  content: '\F002'
-}
 .aicon-exit:before {
   content: '\F00E'
-}
-.aicon-EXPIclub:before {
-  content: '\F009'
 }
 .aicon-eye:before {
   content: '\F00C'
 }
-.aicon-file-text:before {
-  content: '\F00F'
-}
-.aicon-grid:before {
-  content: '\F010'
-}
-.aicon-home:before {
-  content: '\F013'
-}
 .aicon-info-circle:before {
   content: '\F003'
-}
-.aicon-internet:before {
-  content: '\F004'
-}
-.aicon-layer-group:before {
-  content: '\F011'
 }
 .aicon-menu:before {
   content: '\F00D'
@@ -72,21 +51,15 @@
 .aicon-navigation:before {
   content: '\F005'
 }
-.aicon-Schloss:before {
-  content: '\F008'
-}
-.aicon-ship:before {
-  content: '\F006'
+.aicon-search:before {
+  content: '\F018'
 }
 .aicon-smartphone:before {
   content: '\F007'
 }
-.aicon-snowflake:before {
-  content: '\F015'
-}
-.aicon-tv:before {
-  content: '\F00B'
-}
 .aicon-zap:before {
   content: '\F016'
+}
+.aicon-zplus:before {
+  content: '\F019'
 }

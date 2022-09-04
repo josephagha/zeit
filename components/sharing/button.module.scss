@@ -1,7 +1,6 @@
 @import "../../styles/index.scss";
 
 .button {
-  background: $AIDAblue;
   border: none;
   color: $AIDAwhite;
   cursor: pointer;
@@ -14,7 +13,6 @@
   width: 100%;
 
   &:hover {
-    background: $AIDAblue_hover;
   }
 
   .loadingCircle {
@@ -23,7 +21,7 @@
     border-radius: 50%;
     width: 2rem;
     height: 2rem;
-    background: linear-gradient(182deg, $AIDAwhite, #ffffff4d);
+    background: linear-gradient(182deg, $white, $grey);
     -webkit-animation: flip-horizontal-bottom $animationButtonSpeed ease-in-out infinite both;
     animation: flip-horizontal-bottom $animationButtonSpeed ease-in-out infinite both;
   }

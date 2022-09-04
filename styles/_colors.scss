@@ -1,62 +1,14 @@
 // Colors
-$AIDAwhite: #ffffff;
+$white: #ffffff;
+$zplus:#EB362E;
 
-$AIDAdark: #004461;
-$AIDAblack: #171717;
-$AIDAgrey_darker: #777E90;
-$AIDAgrey_dark: #B1B5C3;
-$AIDAgrey: #E6E8EC;
-$AIDAgrey_light:#F0F4F6;
+$black: #000;
+$grey: #d9d8d8;
+$grey_dark: #BABABA;
+$grey_darker: #74747b;
 
-$AIDAgreen:#009F48;
-$AIDAgreen_light:#ECF8EA;
-$AIDAred: #ED2400;
-$AIDAred_light:#FFEAE6;
-$AIDAyellow: #FFC200;
-$AIDAyellow_light:#FFFBE5;
-$AIDAblue: #0094CA;
-$AIDAblue_hover: #3399CC;
-$AIDAblue_light:#E7F8FD;
-
-$special_border: #DBDEE7;
-
-.textAIDAblack{
-color:$AIDAblack;
-}
-.textAIDAgrey_darker{
-color:$AIDAgrey_darker;
-}
-.textAIDAgrey_dark{
-color:$AIDAgrey_dark;
-}
-.textAIDAgrey{
-color:$AIDAgrey !important;
-}
-.textAIDAgrey_light{
-color:$AIDAgrey_light;
-}
-.textAIDAgreen{
-color:$AIDAgreen;
-}
-.textAIDAgreen_light{
-color:$AIDAgreen_light;
-}
-.textAIDAred{
-color:$AIDAred;
-}
-.textAIDAred_light{
-color:$AIDAred_light;
-}
-.textAIDAblue{
-color:$AIDAblue;
-}
-.textAIDAblue_light{
-color:$AIDAblue_light;
-}
-.textspecial_border{
-color:$special_border;
-}
-
+$special_border: #303033;
+$border: $grey_dark;
 
 //old
 

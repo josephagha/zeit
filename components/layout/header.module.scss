@@ -2,93 +2,104 @@
 
 .header {
   display: flex;
+  flex-flow: column wrap;
+  gap: 3rem;
+}
+
+.nav,
+.categoryNav,
+.subnav {
+  display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
-  margin-top: 6rem;
-  margin-bottom: 39px;
+  position: relative;
+  color: $white;
+  &__list {
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+
+    &__item {
+      display: inherit;
+      align-items: inherit;
+      list-style: none;
+      margin-right: 1.3rem;
+
+      &__bookmarkIcon {
+        color: $grey_darker;
+        font-size: 2rem;
+        margin: 0 0.7rem 0 0.8rem;
+      }
+
+      &_more {
+        &::after {
+          content: "▾";
+          display: inline-block;
+          margin: 0 0 0 0.5rem;
+        }
+      }
+    }
+  }
 }
 
 .nav {
-  position: relative;
-
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-  .input {
-    display: none;
+  &__list {
+    &__item {
+      font-size: $nav_link_small;
+    }
   }
-  .label {
-    font-size: 4rem;
-    color: $AIDAblack;
-    padding: 1rem;
-  }
-  .content {
-    overflow: hidden;
-    position: absolute;
-    top: 3.4rem;
-    right: 0;
-    max-height: 0;
-    min-width: 21rem;
-    opacity: 0;
+}
 
-    -webkit-box-shadow: rgb(214 230 246 / 37%) 0px 11px 17px 0px;
-    box-shadow: rgb(214 230 246 / 37%) 0px 11px 17px 0px;
-
-    background-color: $AIDAwhite;
+.subnav {
+  &__search {
     display: flex;
-    flex-flow: column;
-    align-items: flex-start;
-    padding-left: 2rem;
-    transition: all 0.1s;
+    align-items: center;
+    border: 1px solid $special_border;
+    height: 4.5rem;
+    width: 28rem;
+    border-radius: 0.5rem;
+    &__input {
+      background: none;
+      border: none;
+      font-size: $button1-font-size;
+      height: inherit;
+      width: 80%;
+      padding-left: 1rem;
+    }
+    &__button {
+      background-color: transparent;
+      border: 0;
+      border-left: 1px solid $special_border;
+      height: inherit;
+      color: $grey_dark;
+      width: 20%;
+      font-size: $button1-font-size * 1.4;
+      padding-top: 0.8rem;
 
-    .menuItem {
-      display: flex;
-      flex-flow: column;
-      justify-items: flex-start;
-      align-items: flex-start;
-      margin-bottom: 1.5rem;
-      width: 100%;
-      &:last-child {
-        margin-bottom: 0;
-      }
-      font-size: 2rem;
-      cursor: pointer;
       &:hover {
-        color: $AIDAblue;
-      }
-
-      .button {
-        display: flex;
-        align-items: center;
-        border: none;
-        background: none;
-        font-size: 2rem;
-        padding: 0;
-        cursor: pointer;
-        &:hover {
-          color: $AIDAblue;
-        }
-
-        .icon {
-          margin-right: 0.5rem;
-        }
+        color: $grey;
       }
     }
   }
+}
 
-  // :checked
-  .input:checked {
-    + .label {
-      color: $AIDAblue;
-      background-color: $AIDAwhite;
-    }
-    ~ div {
-      max-height: 100vh;
-      padding: 2rem;
-      opacity: 1;
+.categoryNav {
+  // border-bottom: solid 1px $special_border;
+
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__item {
+      font-size: $nav_link;
+      &__zplusIcon {
+        background-color: $zplus;
+        font-size: 3rem;
+        height: 3rem;
+        margin: 0 0 0 2rem;
+      }
     }
   }
 }

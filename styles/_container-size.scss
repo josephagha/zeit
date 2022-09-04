@@ -19,14 +19,14 @@ $desktop-container-size:160rem;
        //Tablet is 768px wide or more
        @media screen and (min-width: 768px){@content;}
     }@else if $size == l {
-      //Desktop up 1280px or wide
-      @media screen and (min-width: 1290px){@content;}
+      //Desktop up 1280px or wide zeit use 1000px
+      @media screen and (min-width: 1000px){@content;}
   }
   }
 
 .container{ 
-  max-width: calc(100% - 4rem);
-  @include screen(m){max-width: calc(100% - 8rem);}
-  @include screen(l){max-width: $desktop-container-size;}
+  max-width: 1000px;
   margin: auto;
+  padding: 3rem;
+  background-color: #121212;
 }

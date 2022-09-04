@@ -1,56 +1,106 @@
 import Image from "next/image";
 import Link from "next/link";
-import { signOut } from "next-auth/react";
-import { useSession } from "next-auth/react";
 
 import logo from "../../public/svg/logo.svg";
 import styles from "./header.module.scss";
 
 function Header() {
-  const { data: session, status } = useSession();
-  const loading = status === "loading";
-
-  function logoutHandler() {
-    signOut();
-  }
-
   return (
     <header className={styles.header}>
-      <Link href="/">
-        <a>
-          <Image src={logo} alt="Logo" />
-        </a>
-      </Link>
       <nav className={styles.nav}>
-        <input className={styles.input} type="checkbox" id="menu" name="menu" />
-        <label className={styles.label} htmlFor="menu">
-          <i className={"aicon-menu " + styles.title_arrow}></i>
-        </label>
-        <div className={styles.content}>
-          <div className={styles.menuItem}>
-            <Link href="/">Projektübersicht</Link>
-          </div>
-          {status !== "authenticated" && !loading && (
-            <div className={styles.menuItem}>
-              <Link href="/auth">Login</Link>
-            </div>
-          )}
-          {status === "authenticated" && (
-            <div className={styles.menuItem}>
-              <Link href="/dashboard">Dashboard</Link>
-            </div>
-          )}
-          {status === "authenticated" && (
-            <div className={styles.menuItem}>
-              <span className={"separator "}></span>
-
-              <button className={styles.button} onClick={logoutHandler}>
-                <i className={"aicon-exit " + styles.icon}></i> Logout
-              </button>
-            </div>
-          )}
-        </div>
+        <ul className={styles.nav__list}>
+          <li className={`${styles.nav__list__item}`}>
+            ABO
+          </li>
+          <li className={`${styles.nav__list__item}`}>
+            SHOP
+          </li>
+          <li className={`${styles.nav__list__item}`}>
+            AKADEMIE
+          </li>
+          <li className={`${styles.nav__list__item}`}>
+            JOBS
+          </li>
+          <li className={`${styles.nav__list__item} ${styles.categoryNav__list__item_more}`}>
+            MEHR
+          </li>
+        </ul>
+        <ul className={styles.nav__list}>
+          <li className={`${styles.nav__list__item}`}>
+            E-PAPER
+          </li>
+          <li className={`${styles.nav__list__item}`}>
+            AUDIO
+          </li>
+          <li className={`${styles.nav__list__item}`}>
+            APPS
+          </li>
+          <li className={`${styles.nav__list__item}`}>
+            ARCHIV
+          </li>
+          <li className={`${styles.nav__list__item}`}>
+            MERKLISTE <i className={styles.nav__list__item__bookmarkIcon + " aicon-bookmark"}></i>
+          </li>
+          <li className={`${styles.nav__list__item}`}>
+            ANMELDEN
+          </li>
+        </ul>
       </nav>
+
+      <div className={styles.subnav}>
+        <Link href="/" className={styles.subnav__logo}>
+          <a>
+            <Image src={logo} alt="Logo" />
+          </a>
+        </Link>
+        <div className={styles.subnav__search}>
+          <input className={styles.subnav__search__input} placeholder="Suche" />
+          <button className={styles.subnav__search__button}>
+            <i className="aicon-search"></i>
+          </button>
+        </div>
+      </div>
+
+      <div className={styles.categoryNav}>
+        <ul className={styles.categoryNav__list}>
+          <li className={`${styles.categoryNav__list__item}`}>
+          Politik
+          </li>
+          <li className={`${styles.categoryNav__list__item}`}>
+          Gesellschaft
+          </li>
+          <li className={`${styles.categoryNav__list__item}`}>
+          Wirtschaft
+          </li>
+          <li className={`${styles.categoryNav__list__item}  ${styles.categoryNav__list__item_more}`}>
+          Kultur
+          </li>
+          <li className={`${styles.categoryNav__list__item}`}>
+          Wissen
+          </li>
+          <li className={`${styles.categoryNav__list__item}  ${styles.categoryNav__list__item_more}`}>
+          Gesundheit
+          </li>
+          <li className={`${styles.categoryNav__list__item}`}>
+          Digital
+          </li>
+          <li className={`${styles.categoryNav__list__item}  ${styles.categoryNav__list__item_more}`}>
+          Campus
+          </li>
+          <li className={`${styles.categoryNav__list__item}`}>
+          Sinn
+          </li>
+          <li className={`${styles.categoryNav__list__item}`}>
+          ZEITmagazin
+          </li>
+          <li className={`${styles.categoryNav__list__item}  ${styles.categoryNav__list__item_more}`}>
+          mehr
+          </li>
+          <li className={`${styles.categoryNav__list__item}  ${styles.categoryNav__list__item__zplusIcon}`}>
+          <i className="aicon-zplus"></i>
+          </li>
+        </ul>
+      </div>
     </header>
   );
 }
