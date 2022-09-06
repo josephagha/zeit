@@ -3,6 +3,7 @@ export default {
     "bookmark": "aicon-bookmark",
     "check": "aicon-check",
     "chevronUp": "aicon-chevron-up",
+    "close": "aicon-close",
     "exit": "aicon-exit",
     "eye": "aicon-eye",
     "infoCircle": "aicon-info-circle",

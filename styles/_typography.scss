@@ -60,6 +60,8 @@ $h3-font-weight: 400;
 $h4-font-size: 3rem;
 $h4-font-weight: 400;
 
+$body1: 2.25rem;
+
 $caption1-font-size: 1.75rem;
 $caption2-font-size: 1.9rem;
 $button1-font-size: 2rem;
@@ -67,7 +69,6 @@ $link2-font-size: 2rem;
 
 $nav_link: 1.9rem;
 $nav_link_small: 1.4rem;
-
 
 .typography {
   &_h1 {
@@ -102,7 +103,7 @@ $nav_link_small: 1.4rem;
     text-transform: uppercase;
   }
   &_body1 {
-    font-size: 2.25rem;
+    font-size: $body1;
     line-height: 3.75rem;
   }
   &_body1-bold {

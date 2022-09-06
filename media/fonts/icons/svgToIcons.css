@@ -33,6 +33,9 @@
 .aicon-chevron-up:before {
   content: '\F001'
 }
+.aicon-close:before {
+  content: '\F01B'
+}
 .aicon-exit:before {
   content: '\F00E'
 }

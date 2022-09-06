@@ -2,15 +2,15 @@ import { Fragment } from "react";
 import StartingPage from "../components/startingPage/startingPage";
 
 
-export default function Home({weather}) {
+export default function Home() {
   return (
     <Fragment>
-      <StartingPage weather={weather} />
+      <StartingPage />
     </Fragment>
   );
 }
 
-const defauleEndpoint = `https://api.openweathermap.org/data/2.5/weather?q=Hamburg&units=metric&appid=${process.env.WEATHER_API_KEY}`;
+/* const defauleEndpoint = `https://api.openweathermap.org/data/2.5/weather?q=Hamburg&units=metric&appid=${process.env.WEATHER_API_KEY}`;
 
 export async function getStaticProps() {
   const res = await fetch(defauleEndpoint);
@@ -20,6 +20,6 @@ export async function getStaticProps() {
     props: {
       weather,
     },
-    revalidate: 10800
+    revalidate: 7200
   };
-}
+} */

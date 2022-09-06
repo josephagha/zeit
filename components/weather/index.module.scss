@@ -1,25 +1,58 @@
-@import '../../styles/index.scss';
+@import "../../styles/index.scss";
 
-.weatherContainer{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    padding: 1rem 1rem 1rem 0.6rem;
-    margin-left: 1rem;
-    height: 3rem;
-    background-color: $grey_darker_plus;
-    border-radius: 0.5rem;
-    font-size: $nav_link_small;
+.weatherContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 1rem 1rem 1rem 0.6rem;
+  margin-left: 1rem;
+  height: 3rem;
+  background-color: $grey_darker_plus;
+  border-radius: 0.5rem;
+  font-size: $nav_link_small;
 
-    &__button{
-        background-color: transparent;
-        border: 0;
-        padding: 0 0 0 1.3rem;
-        color: $grey_dark;
-        cursor: pointer;
+  &__button {
+    background-color: transparent;
+    border: 0;
+    padding: 0 0 0 1.3rem;
+    color: $grey_dark;
+    cursor: pointer;
 
-        &:hover{
-            color: $white;
-        }
+    &:hover {
+      color: $white;
     }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    border: 1px solid $grey;
+    height: 7rem;
+    width: 97%;
+    margin: auto;
+    border-radius: 0.5rem;
+    &__input {
+      background: none;
+      border: none;
+      font-size: $button1-font-size;
+      height: inherit;
+      width: 80%;
+      padding-left: 1rem;
+      color: $white;
+    }
+    &__button {
+      background-color: transparent;
+      border: 0;
+      border-left: 1px solid $grey;
+      height: inherit;
+      color: $grey_dark;
+      width: 20%;
+      font-size: $button1-font-size * 2;
+      padding-top: 0.8rem;
+
+      &:hover {
+        color: $grey;
+      }
+    }
+  }
 }

@@ -1,0 +1,48 @@
+@import "../../styles/index.scss";
+
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999999999;
+  background-color: $modal_bg;
+  display: grid;
+  place-items: center;
+  &__content {
+    background-color: $grey_darker_plus;
+    min-height: 27vh;
+    min-width: 40vw;
+    border-radius: 0.5rem;
+    padding: 3rem;
+    color: $body-color;
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 90%;
+      margin: auto;
+      padding-bottom: 0.5rem;
+    
+      &__title{
+        font-size: $h4-font-size;
+        color: $grey;
+        
+      }
+      &__button{
+        border: none;
+        background-color: transparent;
+        font-size: $link2-font-size;
+        &__icon{
+       
+          font-size: 2rem;
+          color: $grey_darker;
+        }
+      }
+    }
+    &__body {
+      padding: 2rem;
+    }
+  }
+}
