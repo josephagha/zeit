@@ -7,26 +7,41 @@
   padding: 1rem 1rem 1rem 0.6rem;
   margin-left: 1rem;
   height: 3rem;
-  background-color: $grey_darker_plus;
+  background-color: $grey;
+  @include color-scheme(dark) {
+    background-color: $grey_darker_plus;
+  }
   border-radius: 0.5rem;
   font-size: $nav_link_small;
 
+  &__city {
+    text-transform: capitalize;
+    padding-right: 0.5rem;
+  }
   &__button {
     background-color: transparent;
     border: 0;
     padding: 0 0 0 1.3rem;
-    color: $grey_dark;
+    color: $black;
+    @include color-scheme(dark) {
+      color: $grey_dark;
+    }
     cursor: pointer;
 
     &:hover {
-      color: $white;
+      @include color-scheme(dark) {
+        color: $white;
+      }
     }
   }
 
   &__search {
     display: flex;
     align-items: center;
-    border: 1px solid $grey;
+    border: 1px solid $black;
+    @include color-scheme(dark) {
+      border: 1px solid $grey;
+    }
     height: 7rem;
     width: 97%;
     margin: auto;
@@ -38,20 +53,34 @@
       height: inherit;
       width: 80%;
       padding-left: 1rem;
-      color: $white;
+      color: $black;
+      @include color-scheme(dark) {
+        color: $white;
+      }
+      &:focus {
+        outline: none;
+      }
     }
     &__button {
       background-color: transparent;
       border: 0;
-      border-left: 1px solid $grey;
+      border-left: 1px solid $black;
+      color: $grey_darker_plus;
+      @include color-scheme(dark) {
+        border-left: 1px solid $grey;
+        color: $grey_dark;
+      }
       height: inherit;
-      color: $grey_dark;
+      
       width: 20%;
       font-size: $button1-font-size * 2;
       padding-top: 0.8rem;
 
       &:hover {
-        color: $grey;
+        color: $black;
+        @include color-scheme(dark) {
+          color: $grey;
+        }
       }
     }
   }

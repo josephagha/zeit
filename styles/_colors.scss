@@ -1,34 +1,25 @@
 // Colors
 $white: #ffffff;
-$zplus:#EB362E;
+$zplus: #eb362e;
 
 $black: #000;
 $grey: #d9d8d8;
-$grey_dark: #BABABA;
+$grey_dark: #bababa;
 $grey_darker: #74747b;
 $grey_darker_plus: #252525;
 
 $special_border: #303033;
 $border: $grey_dark;
 
-$modal_bg:#000000e4;
+$modal_bg: #000000e4;
 
-//old
 
-$crimson: #96255c;
-$dark-grey: #cacaca;
-$darker-grey: #a0a0a0;
-$extra-blue: #2dafe6;
-$green: #71bc51;
-$grey: #e5e5e5;
-$inherit: inherit;
-$light-blue: #f5faff;
-$light-green: #e3f2dc;
-$light-grey: #f8f8f8;
-$light-red: #ffefe9;
-$orange: #ffa12e;
-$pauschal: #7d79b1;
-$pink: #e5007d;
-$red: #e74502;
-$transparent: transparent;
-$violett: #7d79b1;
+$startpage_container: $white;
+$startpage_container_dark:#121212;
+
+/** Helper to tigth properties to color preferences */
+@mixin color-scheme($value: light) {
+    @media (prefers-color-scheme: $value) {
+      @content; 
+    }
+  }

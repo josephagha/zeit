@@ -1,25 +1,17 @@
 import { Fragment } from "react";
-import StartingPage from "../components/startingPage/startingPage";
+import Head from "next/head";
 
+import Favicon from "../public/svg/favicon.svg";
+import StartingPage from "../components/startingPage/startingPage";
 
 export default function Home() {
   return (
     <Fragment>
+      <Head>
+        <title>ZEIT ONLINE</title>
+        <link rel="icon" href={Favicon} priority/>
+      </Head>
       <StartingPage />
     </Fragment>
   );
 }
-
-/* const defauleEndpoint = `https://api.openweathermap.org/data/2.5/weather?q=Hamburg&units=metric&appid=${process.env.WEATHER_API_KEY}`;
-
-export async function getStaticProps() {
-  const res = await fetch(defauleEndpoint);
-  const weather = await res.json();
-
-  return {
-    props: {
-      weather,
-    },
-    revalidate: 7200
-  };
-} */

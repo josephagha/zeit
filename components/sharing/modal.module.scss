@@ -11,12 +11,18 @@
   display: grid;
   place-items: center;
   &__content {
-    background-color: $grey_darker_plus;
-    min-height: 27vh;
+    background-color: $grey;
+    @include color-scheme(dark) {
+      background-color: $grey_darker_plus;
+    }
+    min-height: 28rem;
     min-width: 40vw;
     border-radius: 0.5rem;
     padding: 3rem;
-    color: $body-color;
+    color: $black;
+    @include color-scheme(dark) {
+      color: $white;
+    }
     &__header {
       display: flex;
       align-items: center;
@@ -24,18 +30,19 @@
       max-width: 90%;
       margin: auto;
       padding-bottom: 0.5rem;
-    
-      &__title{
+
+      &__title {
         font-size: $h4-font-size;
-        color: $grey;
-        
+        color: $black;
+        @include color-scheme(dark) {
+          color: $grey;
+        }
       }
-      &__button{
+      &__button {
         border: none;
         background-color: transparent;
         font-size: $link2-font-size;
-        &__icon{
-       
+        &__icon {
           font-size: 2rem;
           color: $grey_darker;
         }

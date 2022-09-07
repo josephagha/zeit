@@ -1,2 +1,8 @@
-@import '../../styles/index.scss';
+@import "../../styles/index.scss";
 
+.startpage_container {
+  background-color: $startpage_container;
+  @include color-scheme(dark) {
+    background-color: $startpage_container_dark;
+  }
+}

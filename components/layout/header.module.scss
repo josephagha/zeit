@@ -13,7 +13,10 @@
   flex-flow: row wrap;
   justify-content: space-between;
   position: relative;
-  color: $white;
+  color: $black;
+  @include color-scheme(dark) {
+    color: $white;
+  }
   &__list {
     padding: 0;
     display: flex;
@@ -27,6 +30,9 @@
 
       &__bookmarkIcon {
         color: $grey_darker;
+        @include color-scheme(dark) {
+          color: $grey;
+        }
         font-size: 2rem;
         margin: 0 0.7rem 0 0.8rem;
       }
@@ -52,6 +58,16 @@
 }
 
 .subnav {
+  &__logo {
+    &__svg {
+      fill: $black;
+      color: $black;
+      @include color-scheme(dark) {
+        fill: $white;
+        color: $white;
+      }
+    }
+  }
   &__search {
     display: flex;
     align-items: center;

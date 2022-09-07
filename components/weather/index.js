@@ -5,31 +5,92 @@ import Modal from "../sharing/modal";
 import styles from "./index.module.scss";
 
 export default function Weather() {
-  const [weather, setWeather] = useState();
-  const [isLoading, setLoading] = useState(false)
-
+  const [isLoading, setLoading] = useState(false);
   const [schowModal, setSchowModal] = useState(false);
 
-  const [city, setCity] = useState("Hamburg");
-  const [weatherIcon, setWeatherIcon] = useState("01n");
-  const [weatherTemperature, setWeatherTemperature] = useState("18");
-  const [weatherTemperatureText, setWeatherTemperatureTexty] = useState("Clear");
+  const [weatherIcon, setWeatherIcon] = useState();
+  const [userCity, setUserCity] = useState();
+  const [weatherTemparature, setWeatherTemparature] = useState();
+  const [weatherTemparatureText, setWeatherTemparatureText] = useState();
 
   const cityRef = useRef();
 
   useEffect(() => {
-    setLoading(true)
-    fetch("/api/weather")
-      .then((res) => res.json())
-      .then((data) => {
-        setWeather(data);
-        setLoading(false)
-      });
+    setLoading(true);
+    if (localStorage) {
+      let USER_CITY = localStorage.getItem("USER_CITY");
+      if (USER_CITY === null) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+          getWeatherData(
+            position.coords.latitude,
+            position.coords.longitude,
+            "Hamburg"
+          );
+        });
+      }
+    }
+    setLoading(false);
   }, []);
 
-  if (isLoading) return <p>Loading...</p>
+  useEffect(() => {
+    const USER_CITY = localStorage.getItem("USER_CITY");
+    const WEATHER_ICON = localStorage.getItem("WEATHER_ICON");
+    const WEATHER_TEMPARATURE = localStorage.getItem("WEATHER_TEMPARATURE");
+    const WEATHER_TEMPARATURE_TEXT = localStorage.getItem("WEATHER_TEMPARATURE_TEXT");
 
-  console.log(weather);
+    if (USER_CITY !== null) {
+      setUserCity(JSON.parse(USER_CITY));
+      setWeatherIcon(JSON.parse(WEATHER_ICON));
+      setWeatherTemparature(JSON.parse(WEATHER_TEMPARATURE));
+      setWeatherTemparatureText(JSON.parse(WEATHER_TEMPARATURE_TEXT));
+    }
+  }, []);
+
+  const changeCityName = (cityName) => {
+    setLoading(true);
+    getWeatherData(0, 0, cityName);
+    setSchowModal(false);
+    setLoading(false);
+  };
+
+  const getWeatherData = (latUser, lonUser, city) => {
+    fetch("/api/weather?" +
+        new URLSearchParams({
+          city: city,
+          latUser: latUser,
+          lonUser: lonUser,
+        }))
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.weather) {
+        setWeatherIcon(data.weather[0].icon);
+        setUserCity(data.name);
+        setWeatherTemparature(data.main.temp);
+        setWeatherTemparatureText(data.weather[0].main);
+      }
+        if (localStorage && data.weather) {
+          localStorage.setItem("USER_CITY", JSON.stringify(data.name));
+          localStorage.setItem(
+            "WEATHER_ICON",
+            JSON.stringify(data.weather[0].icon)
+          );
+          localStorage.setItem(
+            "WEATHER_TEMPARATURE",
+            JSON.stringify(data.main.temp)
+          );
+          localStorage.setItem(
+            "WEATHER_TEMPARATURE_TEXT",
+            JSON.stringify(data.weather[0].main)
+          );
+        }
+      })
+  };
+
+  if (isLoading || !weatherIcon) {
+    getWeatherData();
+    return <p>Loading...</p>;
+  }
+
   return (
     <div className={styles.weatherContainer}>
       <Image
@@ -37,8 +98,10 @@ export default function Weather() {
         alt="weather"
         width="24"
         height="24"
+        priority
       />
-      {city} / {weatherTemperature}°C {weatherTemperatureText}
+      <span className={styles.weatherContainer__city}>{userCity}</span> /{" "}
+      {Math.round(weatherTemparature)}°C {weatherTemparatureText}
       <button
         className={styles.weatherContainer__button}
         onClick={() => {
@@ -63,7 +126,7 @@ export default function Weather() {
           <button
             className={styles.weatherContainer__search__button}
             onClick={() => {
-              setCity(cityRef.current.value), setSchowModal(false);
+              changeCityName(cityRef.current.value);
             }}
           >
             <i className="aicon-search"></i>
