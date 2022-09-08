@@ -54,7 +54,7 @@ export default function Weather() {
   };
  
   const getWeatherData = (latUser, lonUser, city) => {
-    fetch(`${process.env.ABSOLUT_URL}/api/weather?` +
+    fetch(`/api/weather?` +
         new URLSearchParams({
           city: city,
           latUser: latUser,
