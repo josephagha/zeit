@@ -8,42 +8,26 @@ export default function Weather() {
   const [isLoading, setLoading] = useState(false);
   const [schowModal, setSchowModal] = useState(false);
 
+  const cityRef = useRef();
+
   const [weatherIcon, setWeatherIcon] = useState();
   const [userCity, setUserCity] = useState();
   const [weatherTemparature, setWeatherTemparature] = useState();
   const [weatherTemparatureText, setWeatherTemparatureText] = useState();
 
-  const cityRef = useRef();
-
   useEffect(() => {
     setLoading(true);
-    if (typeof window !== 'undefined')  {
-      let USER_CITY = localStorage.getItem("USER_CITY");
-      if (USER_CITY === null) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-           getWeatherData(
-            position.coords.latitude,
-            position.coords.longitude,
-            "Hamburg"
-          ); 
-        });
-      }
-    }
+    if (typeof window === "undefined") return;
+    let USER_CITY = localStorage.getItem("USER_CITY");
+    if (USER_CITY !== null) return;
+    navigator.geolocation.getCurrentPosition((position) => {
+      getWeatherData(
+        position.coords.latitude,
+        position.coords.longitude,
+        "Hamburg"
+      );
+    });
     setLoading(false);
-  }, []);
-
-  useEffect(() => {
-    const USER_CITY = localStorage.getItem("USER_CITY");
-    const WEATHER_ICON = localStorage.getItem("WEATHER_ICON");
-    const WEATHER_TEMPARATURE = localStorage.getItem("WEATHER_TEMPARATURE");
-    const WEATHER_TEMPARATURE_TEXT = localStorage.getItem("WEATHER_TEMPARATURE_TEXT");
-
-    if (USER_CITY !== null) {
-      setUserCity(JSON.parse(USER_CITY));
-      setWeatherIcon(JSON.parse(WEATHER_ICON));
-      setWeatherTemparature(JSON.parse(WEATHER_TEMPARATURE));
-      setWeatherTemparatureText(JSON.parse(WEATHER_TEMPARATURE_TEXT));
-    }
   }, []);
 
   const changeCityName = (cityName) => {
@@ -52,9 +36,10 @@ export default function Weather() {
     setSchowModal(false);
     setLoading(false);
   };
- 
+
   const getWeatherData = (latUser, lonUser, city) => {
-    fetch(`/api/weather?` +
+    fetch(
+      `/api/weather?` +
         new URLSearchParams({
           city: city,
           latUser: latUser,
@@ -62,32 +47,59 @@ export default function Weather() {
         }))
       .then((res) => res.json())
       .then((data) => {
-        if (data.weather) {
-        setWeatherIcon(data.weather[0].icon);
-        setUserCity(data.name);
-        setWeatherTemparature(data.main.temp);
-        setWeatherTemparatureText(data.weather[0].main);
-      }
-      if (typeof window !== 'undefined' && data.weather){
-          localStorage.setItem("USER_CITY", JSON.stringify(data.name));
-          localStorage.setItem(
-            "WEATHER_ICON",
-            JSON.stringify(data.weather[0].icon)
-          );
-          localStorage.setItem(
-            "WEATHER_TEMPARATURE",
-            JSON.stringify(data.main.temp)
-          );
-          localStorage.setItem(
-            "WEATHER_TEMPARATURE_TEXT",
-            JSON.stringify(data.weather[0].main)
-          );
-        }
-      })
+        if (!data.weather) return;
+        setWeatherDataInState(
+          data.weather[0].icon,
+          data.name,
+          data.main.temp,
+          data.weather[0].main
+        );
+        setWeatherDataInStorage(data);
+      });
   };
 
-  if (isLoading || !weatherIcon) {
-    getWeatherData();
+  useEffect(() => {
+    const USER_CITY = localStorage.getItem("USER_CITY");
+    const WEATHER_ICON = localStorage.getItem("WEATHER_ICON");
+    const WEATHER_TEMPARATURE = localStorage.getItem("WEATHER_TEMPARATURE");
+    const WEATHER_TEMPARATURE_TEXT = localStorage.getItem("WEATHER_TEMPARATURE_TEXT");
+
+    if (USER_CITY == null) return;
+
+    setWeatherDataInState(
+      JSON.parse(WEATHER_ICON),
+      JSON.parse(USER_CITY),
+      JSON.parse(WEATHER_TEMPARATURE),
+      JSON.parse(WEATHER_TEMPARATURE_TEXT)
+    );
+
+    setLoading(false);
+  }, []);
+
+  const setWeatherDataInState = (
+    toWeatherIcon,
+    toUserCity,
+    toWeatherTemparature,
+    toWeatherTemparatureText
+  ) => {
+    setWeatherIcon(toWeatherIcon);
+    setUserCity(toUserCity);
+    setWeatherTemparature(toWeatherTemparature);
+    setWeatherTemparatureText(toWeatherTemparatureText);
+  };
+
+  const setWeatherDataInStorage = (data) => {
+    if (typeof window == "undefined") return;
+    if (!data.weather) return;
+
+    localStorage.setItem("USER_CITY", JSON.stringify(data.name));
+    localStorage.setItem("WEATHER_ICON", JSON.stringify(data.weather[0].icon));
+    localStorage.setItem("WEATHER_TEMPARATURE", JSON.stringify(data.main.temp));
+    localStorage.setItem("WEATHER_TEMPARATURE_TEXT",JSON.stringify(data.weather[0].main)
+    );
+  };
+
+  if (isLoading || !weatherIcon ) {
     return <p>Loading...</p>;
   }
 

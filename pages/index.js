@@ -9,7 +9,7 @@ export default function Home() {
     <Fragment>
       <Head>
         <title>ZEIT ONLINE</title>
-        <link rel="icon" href={Favicon} priority="true"/>
+        {/* <link rel="icon" href={Favicon} priority="true"/> */}
       </Head>
       <StartingPage />
     </Fragment>
