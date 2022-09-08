@@ -17,15 +17,15 @@ export default function Weather() {
 
   useEffect(() => {
     setLoading(true);
-    if (localStorage) {
+    if (typeof window !== 'undefined')  {
       let USER_CITY = localStorage.getItem("USER_CITY");
       if (USER_CITY === null) {
         navigator.geolocation.getCurrentPosition(function (position) {
-          getWeatherData(
+           getWeatherData(
             position.coords.latitude,
             position.coords.longitude,
             "Hamburg"
-          );
+          ); 
         });
       }
     }
@@ -52,9 +52,9 @@ export default function Weather() {
     setSchowModal(false);
     setLoading(false);
   };
-
+ 
   const getWeatherData = (latUser, lonUser, city) => {
-    fetch("/api/weather?" +
+    fetch(`${process.env.ABSOLUT_URL}/api/weather?` +
         new URLSearchParams({
           city: city,
           latUser: latUser,
@@ -68,7 +68,7 @@ export default function Weather() {
         setWeatherTemparature(data.main.temp);
         setWeatherTemparatureText(data.weather[0].main);
       }
-        if (localStorage && data.weather) {
+      if (typeof window !== 'undefined' && data.weather){
           localStorage.setItem("USER_CITY", JSON.stringify(data.name));
           localStorage.setItem(
             "WEATHER_ICON",
@@ -98,7 +98,7 @@ export default function Weather() {
         alt="weather"
         width="24"
         height="24"
-        priority
+        priority="true"
       />
       <span className={styles.weatherContainer__city}>{userCity}</span> /{" "}
       {Math.round(weatherTemparature)}°C {weatherTemparatureText}

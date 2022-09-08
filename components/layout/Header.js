@@ -44,7 +44,7 @@ function Header() {
       <div className={styles.subnav}>
         <Link href="/" className={styles.subnav__logo}>
           <a>
-            <Image className={styles.subnav__logo__svg} src={logo} alt="Logo" priority/>
+            <Image className={styles.subnav__logo__svg} src={logo} alt="Logo" />
           </a>
         </Link>
         <div className={styles.subnav__search}>
