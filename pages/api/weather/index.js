@@ -1,5 +1,10 @@
+import ApplyRateLimit from "../../../middleware/rateLimit"
+
 export default async function handler(req, res) {
   if (req.method === "GET") {
+
+    ApplyRateLimit(req, res)
+
     let endpoint;
 
     if (req.query.latUser == 0) {
